@@ -1,3 +1,5 @@
+/* General */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,49 +10,57 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    font-family: 'Montserrat';
+}
+
+/* Desktop */
+
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     background-color: #F2EAE2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-container {
     display: flex;
     max-width: 600px;
+    min-width: 240px;
+}
+
+.product-img,
+.product-info {
+    width: 50%;
 }
 
 .product-img {
-    width: 50%;
     display: block;
     object-fit: cover;
     border-radius: 1rem 0 0 1rem;
 }
 
 .product-info {
-    width: 50%;
     background-color: white;
     border-radius: 0 1rem 1rem 0;
 }
 
 .product-category {
-    font-family: 'Montserrat';
-    font-weight: 500;
     font-size: 1.2rem;
     letter-spacing: 0.5rem;
+    font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 2rem;
     color: #6C7289;
+    margin-bottom: 2rem;
 }
 
 .product-title {
     font-family: 'Fraunces';
-    font-weight: 700;
     font-size: 3.2rem;
-    margin-bottom: 2.4rem;
     line-height: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
 }
 
 .product-info {
@@ -58,7 +68,6 @@ html {
 }
 
 .product-description {
-    font-family: 'Montserrat';
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 2.3rem;
@@ -68,9 +77,8 @@ html {
 
 .product-price-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.9rem;
     align-items: center;
+    gap: 1.9rem;
     margin-bottom: 3rem;
 }
 
@@ -83,12 +91,11 @@ html {
 }
 
 .product-price {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2.3rem;
     text-decoration: line-through;
     color: #6C7289;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 2.3rem;
 }
 
 .product-btn {
@@ -98,7 +105,6 @@ html {
     font-size: 1.4rem;
     padding: 1.5rem 1.2em;
     border-radius: 0.8rem;
-    font-family: 'Montserrat';
     font-weight: 600;
     color: white;
     display: flex;
@@ -111,20 +117,19 @@ html {
     background-color: #1A4032;
 }
 
-@media screen and (max-width: 599px) {
-    .main-content {
-        height: auto;
-    }
+/* Mobile */
 
+@media screen and (max-width: 599px) {
     .product-container {
         flex-direction: column;
         margin: 2.8rem 1.6rem;
     }
 
-    .product-img, .product-info {
+    .product-img,
+    .product-info {
         width: 100%;
-      }
-    
+    }
+
     .product-img {
         max-height: 24rem;
         border-radius: 1rem 1rem 0 0;
